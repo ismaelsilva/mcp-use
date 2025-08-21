@@ -379,10 +379,6 @@ class MCPAgent:
             if isinstance(item, str):
                 final_result = item
                 break
-            # Bedrock AWS 
-            elif not isinstance(item, list):
-                final_result = item[0]['text']
-                break
             # If it's not a tuple, it might be structured output (Pydantic model)
             elif not isinstance(item, tuple):
                 final_result = item
